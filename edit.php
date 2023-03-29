@@ -8,7 +8,7 @@ if (isset($_POST['editdata'])) {
    $username = $_POST['name'];
    $messages = $_POST['messages'];
 
-   $query = "UPDATE jenamel SET email='$email', name='$name', messages=' $messages' WHERE email='$email'  ";
+   $query = "UPDATE usa_tranquillero SET email='$email', name='$name', messages=' $messages' WHERE email='$email'  ";
    $query_run = mysqli_query($conn, $query);
 
    if ($query_run) {

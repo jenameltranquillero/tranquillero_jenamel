@@ -48,7 +48,7 @@
             }
 
             // read all row from database table
-            $sql = "SELECT * FROM jenamel";
+            $sql = "SELECT * FROM usa_tranquillero";
             $result = $connection->query($sql);
 
             if (!$result) {

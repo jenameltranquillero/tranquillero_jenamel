@@ -4,7 +4,7 @@ require_once("conts.php");
 if (isset($_POST['deletedata'])) {
    $username = $_POST['delete'];
 
-   $query = "DELETE FROM jenamel WHERE username='$username'";
+   $query = "DELETE FROM usa_tranquillero WHERE username='$username'";
    $query_run = mysqli_query($con, $query);
 
    if ($query_run) {
