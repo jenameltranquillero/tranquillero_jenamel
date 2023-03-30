@@ -6,7 +6,7 @@ if (isset($_POST)) {
    $email = $_POST['email'];
    $message = $_POST['message'];
 
-   $query = "INSERT INTO usa_tranquillero (name, email, message) VALUES ('$name', '$email', '$message')";
+   $query = "INSERT INTO 'usa_tranquillero' (name, email, message) VALUES ('$name', '$email', '$message')";
    $query_run = mysqli_query($connection, $query);
 
    if ($query_run) {
