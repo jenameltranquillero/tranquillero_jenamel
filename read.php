@@ -1,28 +1,18 @@
 <?php
-$connection = mysqli_connect("localhost","root","");
-$db = mysqli_select_db($connection, 'usa_tranquillero');
+require_once("connect.php");
 
+if (isset($_POST)) {
+   $name = $_POST['name'];
+   $email = $_POST['email'];
+   $message = $_POST['message'];
 
-if(isset($_POST['submit']))
-{
-    $email = $_POST['email'];
-    $name = $_POST['name'];
-    $message = $_POST['message'];
+   $query = "INSERT INTO message (name, email, message) VALUES ('$name', '$email', '$message')";
+   $query_run = mysqli_query($connection, $query);
 
-    $query = "INSERT INTO usa_tranquillero (`email`,`name`,`message`) VALUES ('$email','$name','$message')";
-    $query_run = mysqli_query($connection, $query);
-    
-    if ($query_run)
-    {
-        echo '<script> alert ("COMMENTED"); </script>';
-        header('Location: index.php');
-    }
-    else{echo '<script> alert("ERROR"); </script>';
-    
-    }
-
+   if ($query_run) {
+      echo ("COMMENTED");
+      header('Location: index.php');
+   } else {
+      echo mysqli_error($connection);
+   }
 }
-
-
-
-?>

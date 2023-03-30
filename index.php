@@ -8,28 +8,21 @@
    <title>My Page</title>
    <link rel="stylesheet" href="css/font-awesome.min.css">
    <link rel="stylesheet" href="css/bootstrap.min.css">
-   <link rel="stylesheet" href="//sqltools/connections/FirstMySQLConnection/tranquillero_jenamel/table/student">
-   <link rel="stylesheet" href="/create.php">
-   <link rel="stylesheet" href="mysql/localhost/read_db/jenamel">
-   <link rel="stylesheet" href="./read.php">
-   <link rel="stylesheet" href="./edit.php">
-   <link rel="stylesheet" href="./delete.php">
-
 </head>
 
 <body>
    <div class="container my-5">
       <h2>List of Students</h2>
-      <a class="btn btn-primary" href=" /tranquillero_jenamel/create.php" role="button">New Client</a>
+      <a class="btn btn-primary" href="create.php" role="button">New Client</a>
       <br>
       <table class="table">
          <thead>
             <tr>
-               <th scope = "col">ID</th>
-               <th scope = "col">Email</th>
-               <th scope = "col">Name</th>
-               <th scope = "col">Message</th>
-               <th scope = "col">Action</th>
+               <th scope="col">ID</th>
+               <th scope="col">Email</th>
+               <th scope="col">Name</th>
+               <th scope="col">Message</th>
+               <th scope="col">Action</th>
             </tr>
          </thead>
          <tbody>
@@ -54,7 +47,6 @@
             if (!$result) {
                die("Invalid query: " . $connection->error);
             }
-            
 
             // read data of each row
             foreach ($result->fetch_all() as $key => $value) : ?>
@@ -73,7 +65,6 @@
       </table>
    </div>
    <script src="js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>
