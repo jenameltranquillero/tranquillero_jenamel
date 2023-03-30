@@ -2,11 +2,11 @@
 require_once("connect.php");
 
 if (isset($_POST)) {
-   $name = $_POST['name'];
    $email = $_POST['email'];
+   $name = $_POST['name'];
    $message = $_POST['message'];
 
-   $query = "INSERT INTO 'usa_tranquillero' (name, email, message) VALUES ('$name', '$email', '$message')";
+   $query = "INSERT INTO usa_tranquillero (email, name, message) VALUES ('$name', '$email', '$message')";
    $query_run = mysqli_query($connection, $query);
 
    if ($query_run) {
