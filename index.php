@@ -65,14 +65,10 @@
                   <td><?= $value['3'] ?></td>
                   <td>
                   <td>
-                        <form action="edit.php" method="post">
-                           <input type="hidden" name="id" value="<?php echo $rows['id']?>">
-                           <input type="submit" name="delete" class="btn btn-outline-danger btn-sm" value="EDIT">
-                        </form>
                         <form action="delete.php" method="post">
                            <input type="hidden" name="id" value="<?php echo $rows['id']?>">
                            <input type="submit" name="delete" class="btn btn-outline-danger btn-sm" value="DELETE">
-                        </form>
+                           </form>
                   </td>
                </tr>
             <?php endforeach ?>
