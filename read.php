@@ -1,6 +1,6 @@
 <?php
 $connection = mysqli_connect("localhost","root","");
-$db = mysqli_select_db($connection, 'usa_tranquillero');
+$db = mysqli_select_db($connection, 'usa_tranquillero.sql');
 
 
 if(isset($_POST['submit']))
