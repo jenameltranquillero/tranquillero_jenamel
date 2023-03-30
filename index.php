@@ -30,7 +30,7 @@
             $servername = "localhost";
             $username = "root";
             $password = "";
-            $database = "usa_tranquillero";
+            $database = "usa_tranquillero.sql";
 
             // Create connection
             $connection = new mysqli($servername, $username, $password, $database);
